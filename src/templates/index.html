@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Input</h1>
+    <form action="/" method="post">
+      <label for="in">Url: </label>
+      <input type="text" name="url_real" id="in" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    {% for i in url_list %}
+    <!--  -->
+    <br />http://127.0.0.1:5000/{{ i.url_code }} - {{ i.url_real }}
+    <!--  -->
+    <br />{% endfor %}
+  </body>
+</html>
